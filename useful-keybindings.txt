@@ -1,0 +1,4 @@
+<leader>e 		file hirachy  					f1 
+<leader><leader>	open file finder (entire home directory)	-
+<leader>/		grep search 					ctr shift f
+<leader>:		command history					-
