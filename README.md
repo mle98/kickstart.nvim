@@ -1,5 +1,10 @@
 # kickstart.nvim
 
+## Additional notes from mat
+1) The java lsp needs to be manually installed via Mason (:Mason), select it, and 
+install with 'i'. Then, the java.lua file needs to be adapted, so that the path 
+to jdtls is correct. Note: jdtls needs python 3.10 and jdk 17.
+
 ## Introduction
 
 A starting point for Neovim that is:
