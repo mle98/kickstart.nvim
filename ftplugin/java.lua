@@ -7,4 +7,10 @@ local config = {
   },
 }
 
+config['init_options'] = {
+  bundles = {
+    vim.fn.glob(vim.fn.expand '$HOME/programs/java-debug-main/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*jar', 1),
+  },
+}
+
 require('jdtls').start_or_attach(config)
