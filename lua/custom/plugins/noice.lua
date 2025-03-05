@@ -13,15 +13,17 @@ return {
             --   If not available, we use `mini` as the fallback
             "rcarriga/nvim-notify",
         },
-        config = function() 
+        config = function()
 
             require("noice").setup({
-
-
                 presets = {
                     long_message_to_split = false
-                }
+                },
+                routes = {
+                    view = "notify",
+                    filter = { event = "msg_showmode" },
+                },
             })
         end
-    }
+    },
 }
