@@ -1,23 +1,23 @@
 TODOs/wants:
  
-[X] move selected block up and down 
-[?] move up down methods 
+[X]move selected block up and down 
+[N] move up down methods 
 [ ] move to next diagnostic/match (from search) globally 
-[ ] sneak 
+[N] sneak 
 [ ] something with parenthesis matching maybe? maybe not? 
 [ ] run configurations/run bash command 
-[ ] select all shortcut 
+[N] select all shortcut 
 [ ] terminal integration, maybe with tmux? (harpoon probably) 
-[ ] setup system clipboard yanking 
+[X] setup system clipboard yanking 
 [ ] search files in project, not entire system 
-[ ] recently open files would be nice 
-[ ] recent locations? BIG maybe 
+[X] recently open files would be nice 
+[N] recent locations? BIG maybe 
 [ ] check more mini.nvim things 
 [ ] check more included snacks 
 [ ] maaaaaaybe something about registers? 
 [ ] sometime check multiple buffers 
 [ ] biiiig if: expand selection -> kind of sexy but kinda defeats the purpose of vim? 
-[ ] multicursor!!! 
+[X] multicursor!!! 
 
 
 <leader>e 		        file hirachy  					                                        f1 
@@ -30,7 +30,7 @@ C-Arrow down            multi cursor in next line                               
 M-j/k/l/;  
     - in visual mode    move block up/down/left/right                                           c-arrows
     - in normal mode    harpoon navigation                                                      -
-
+<leader>fr              recent files                                                            C-e
 
 
 miscellanious

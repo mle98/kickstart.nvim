@@ -1,7 +1,25 @@
 return {
-{
+    {
         "folke/trouble.nvim",
-        opts = {}, -- for default options, refer to the configuration section for custom setup.
+        opts = {
+            -- modes = {
+            --     mydiags = {
+            --         mode = "diagnostics", -- inherit from diagnostics mode
+            --         filter = {
+            --             any = {
+            --                 buf = 0, -- current buffer
+            --                 {
+            --                     severity = vim.diagnostic.severity.ERROR, -- errors only
+            --                     -- limit to files in the current project
+            --                     function(item)
+            --                        return item.filename:find((vim.loop or vim.uv).cwd(), 1, true)
+            --                     end,
+            --                 },
+            --             },
+            --         }
+            --     }
+            -- }
+        },
         cmd = "Trouble",
         keys = {
             {
@@ -34,6 +52,22 @@ return {
                 "<cmd>Trouble qflist toggle<cr>",
                 desc = "Quickfix List (Trouble)",
             },
-        }
+            {
+                "]G",
+                function()
+                    require("trouble").next('diagnostics')
+                    require("trouble").jump('diagnostics')
+                end,
+                desc = "Next Trouble diagnostic and jump",
+            },
+            {
+                "[G",
+                function()
+                    require("trouble").previous('diagnostics')
+                    require("trouble").jump('diagnostics')
+                end,
+                desc = "Previous Trouble diagnostic and jump",
+            },
+        },
     },
 }
