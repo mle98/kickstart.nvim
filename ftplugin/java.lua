@@ -1,7 +1,10 @@
 local config = {
 
-  cmd = { '/home/mat/.local/share/nvim/mason/packages/jdtls/bin/jdtls', '--java-executable', '/usr/lib/jvm/jdk-21.0.2/bin/java' },
-  root_dir = require('jdtls.setup').find_root { '.git', 'mvnw', 'gradlew', 'pom.xml', 'build.gradle' },
+  cmd = { '/home/mat/.local/share/nvim/mason/packages/jdtls/bin/jdtls',
+        '--java-executable', '/usr/lib/jvm/jdk-21.0.2/bin/java',
+        '--jvm-arg=-javaagent:/home/mat/.cache/adndevtools/maven/repo/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar'
+  },
+  root_dir = require('jdtls.setup').find_root { '/home/mat/projects/nvim2' },
   settings = {
     java = {},
   },
